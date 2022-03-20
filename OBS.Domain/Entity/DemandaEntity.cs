@@ -11,6 +11,7 @@ namespace OBS.Domain.Entity
         public DateTime DataDemanda { get; set; }
         public string DescricaoDemanda { get; set; }
         public EStatusDemanda StatusDemanda { get; set; }
+        public SolicitanteEntity oSolicitante { get; set; }
         
 
         public DemandaEntity()
@@ -23,6 +24,7 @@ namespace OBS.Domain.Entity
             DataAlteracao=DateTime.MinValue;
             IdUsuarioCadastro = 0;
             IdUsuarioAlteracao=0;
+            oSolicitante = new SolicitanteEntity();
 
         }
     }

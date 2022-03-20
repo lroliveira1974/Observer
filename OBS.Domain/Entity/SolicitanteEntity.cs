@@ -10,6 +10,7 @@ namespace OBS.Domain.Entity
         public string NomeSolicitante { get;set; }
         public string EmailSolicitante { get; set; }
         public string TelefoneSolicitante { get; set; } 
+        public IList<DemandaEntity> lDemandas { get; set; }
 
 
         public SolicitanteEntity()
@@ -22,6 +23,8 @@ namespace OBS.Domain.Entity
             DataAlteracao = DateTime.MinValue;
             IdUsuarioCadastro = 0;
             IdUsuarioAlteracao = 0;
+            lDemandas = new List<DemandaEntity>();
+
         }
 
     }
