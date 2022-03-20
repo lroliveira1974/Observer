@@ -7,7 +7,7 @@ namespace OBS.Domain.Entity
     public class DemandaEntity : EntityBase
     {
 
-        public int IdSolicitante { get; set; }
+    
         public DateTime DataDemanda { get; set; }
         public string DescricaoDemanda { get; set; }
         public EStatusDemanda StatusDemanda { get; set; }
@@ -16,7 +16,7 @@ namespace OBS.Domain.Entity
 
         public DemandaEntity()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid(); 
             DataDemanda = DateTime.MinValue;
             DescricaoDemanda =string.Empty;
             StatusDemanda = EStatusDemanda.None;
