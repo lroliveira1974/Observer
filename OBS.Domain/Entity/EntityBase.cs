@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using FluentValidation.Results;
 
 namespace OBS.Domain.Entity
 {
@@ -13,11 +12,19 @@ namespace OBS.Domain.Entity
         public int IdUsuarioCadastro { get; set; }
         public int IdUsuarioAlteracao { get;set; }
 
+        public ValidationResult ValidationResult { get; private set; }  
 
 
-        public EntityBase()
+
+        protected EntityBase()
         {
-            
+            ValidationResult = new ValidationResult();            
+        }
+
+
+        public void InsertValidationError(string CodErro, string DescricaoErro)
+        {
+            ValidationResult.Errors.Add(new ValidationFailure(CodErro, DescricaoErro)); 
         }
 
     }

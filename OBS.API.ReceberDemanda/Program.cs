@@ -9,8 +9,7 @@ var app = builder.Build();
 app.MapPost("v1/receberdemanda", (DemandaEntity oDemanda) => {
 
     try
-    {
-        
+    {        
         // ESTABELECE CONEXAO COM O RABBITMQ
         var factory = new ConnectionFactory() { HostName = "localhost" };
         using (var connection = factory.CreateConnection())
