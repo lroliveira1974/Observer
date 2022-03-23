@@ -6,11 +6,12 @@ namespace OBS.Domain.Entity
 {
     public class DemandaEntity : EntityBase
     {
-
     
         public DateTime DataDemanda { get; set; }
         public string DescricaoDemanda { get; set; }
         public EStatusDemanda StatusDemanda { get; set; }
+        public EPrioridadeDemanda PrioridadeDemanda { get; set; }
+        public bool IsProcedente { get; set; }
         public SolicitanteEntity oSolicitante { get; set; }
         
 
@@ -22,8 +23,8 @@ namespace OBS.Domain.Entity
             StatusDemanda = EStatusDemanda.None;
             DataCadastro=DateTime.MinValue;
             DataAlteracao=DateTime.MinValue;
-            IdUsuarioCadastro = 0;
-            IdUsuarioAlteracao=0;
+            IdUsuarioCadastro = string.Empty;
+            IdUsuarioAlteracao= string.Empty;
             oSolicitante = new SolicitanteEntity();
 
         }

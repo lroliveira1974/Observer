@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OBS.Domain.Interface.Service;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,8 @@ namespace OBS.Domain.Entity
 {
     public class SolicitanteEntity : EntityBase
     {
+        private IDemandaService iDemandaService;
+
 
         public string NomeSolicitante { get;set; }
         public string EmailSolicitante { get; set; }
@@ -21,10 +24,16 @@ namespace OBS.Domain.Entity
             TelefoneSolicitante = string.Empty;
             DataCadastro = DateTime.MinValue;
             DataAlteracao = DateTime.MinValue;
-            IdUsuarioCadastro = 0;
-            IdUsuarioAlteracao = 0;
+            IdUsuarioCadastro = string.Empty;
+            IdUsuarioAlteracao = string.Empty;
             lDemandas = new List<DemandaEntity>();
 
+        }
+
+        public List<DemandaEntity> ObterListaDemandas(IDemandaService _demandaService)
+        {
+            this.iDemandaService = _demandaService;            
+            return iDemandaService.ObterListaDemandas(this.Id.ToString());
         }
 
     }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBS.Domain", "OBS.Domain\OBS.Domain.csproj", "{400F2192-D698-458B-9A98-FB2D34B4DF0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBS.Domain", "OBS.Domain\OBS.Domain.csproj", "{400F2192-D698-458B-9A98-FB2D34B4DF0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBS.API.ReceberDemanda", "OBS.API.ReceberDemanda\OBS.API.ReceberDemanda.csproj", "{A846C7C9-8596-4247-AAF0-A4EC33B6D894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBS.API.ReceberDemanda", "OBS.API.ReceberDemanda\OBS.API.ReceberDemanda.csproj", "{A846C7C9-8596-4247-AAF0-A4EC33B6D894}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBS.Web", "OBS.Web\OBS.Web.csproj", "{6C5EA15B-86DC-46FA-B949-F4B337FAA4AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A846C7C9-8596-4247-AAF0-A4EC33B6D894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A846C7C9-8596-4247-AAF0-A4EC33B6D894}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A846C7C9-8596-4247-AAF0-A4EC33B6D894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5EA15B-86DC-46FA-B949-F4B337FAA4AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5EA15B-86DC-46FA-B949-F4B337FAA4AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5EA15B-86DC-46FA-B949-F4B337FAA4AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5EA15B-86DC-46FA-B949-F4B337FAA4AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
