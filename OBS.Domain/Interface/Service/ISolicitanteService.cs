@@ -1,10 +1,17 @@
-﻿using System;
+﻿using OBS.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace OBS.Domain.Interface.Service
 {
-    internal interface ISolicitanteService
+    public interface ISolicitanteService
     {
+        public List<SolicitanteEntity> ObterListaSolicitante();        
+        SolicitanteEntity ObterDetalheSolicitante(string IdSolicitante);
+        SolicitanteEntity ObterDetalheSolicitantePorDemanda(string IdDemanda);
+        SolicitanteEntity InserirSolicitante(SolicitanteEntity oSolicitante);
+        SolicitanteEntity AlterarSolicitante(SolicitanteEntity oSolicitante);
+
     }
 }

@@ -7,7 +7,7 @@ namespace OBS.Domain.Entity
 {
     public class SolicitanteEntity : EntityBase
     {
-        private IDemandaService iDemandaService;
+        //private IDemandaService iDemandaService;
 
 
         public string NomeSolicitante { get;set; }
@@ -18,6 +18,8 @@ namespace OBS.Domain.Entity
 
         public SolicitanteEntity()
         {
+            //this.iDemandaService = _demandaService;
+
             Id = Guid.NewGuid();
             NomeSolicitante = string.Empty;
             EmailSolicitante = string.Empty;
@@ -30,11 +32,10 @@ namespace OBS.Domain.Entity
 
         }
 
-        public List<DemandaEntity> ObterListaDemandas(IDemandaService _demandaService)
-        {
-            this.iDemandaService = _demandaService;            
-            return iDemandaService.ObterListaDemandas(this.Id.ToString());
-        }
+        //public List<DemandaEntity> ObterListaDemandas()
+        //{                       
+        //    return iDemandaService.ObterListaDemandas(this.Id.ToString());
+        //}
 
     }
 }

@@ -4,7 +4,9 @@ using System.Text;
 
 namespace OBS.Domain.Interface.Service
 {
-    internal interface IAreaNegocioService
+    public interface IAreaNegocioService
     {
+        List<IAreaNegocioService> ObterListaAreaNegocio();
+        IAreaNegocioService ObterDetalheAreaNegocio(string IdAreaNegocio);
     }
 }

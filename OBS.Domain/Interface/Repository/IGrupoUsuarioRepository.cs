@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OBS.Domain.Interface.Service
+namespace OBS.Domain.Interface.Repository
 {
-    public interface IFaseWorkflowService
+    public interface IGrupoUsuarioRepository
     {
-
     }
 }

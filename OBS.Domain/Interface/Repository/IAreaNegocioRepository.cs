@@ -1,10 +1,13 @@
-﻿using System;
+﻿using OBS.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace OBS.Domain.Interface.Repository
 {
-    internal interface IAreaNegocioRepository
+    public interface IAreaNegocioRepository
     {
+        List<AreaNegocioEntity> ObterListaAreaNegocio();
+        AreaNegocioEntity ObterDetalheAreaNegocio(string IdAreaNegocio);
     }
 }
