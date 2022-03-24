@@ -6,10 +6,10 @@ using OBS.Domain.Entity;
 var builder = WebApplication.CreateBuilder(args);
 
 var rabbitMQHost = builder.Configuration.
-                       GetConnectionString("HostRabbitMQ");
+                       GetSection("HostRabbitMQ");
 
 var queueNamed = builder.Configuration.
-                       GetConnectionString("QueueNamed");
+                       GetSection("QueueNamed");
 
 var app = builder.Build();
 
@@ -20,7 +20,7 @@ app.MapPost("v1/enfilerademanda", (DemandaEntity oDemanda) => {
     {
         EnfileraDemandaService oEDS = new EnfileraDemandaService();
 
-        if (oEDS.EnfileraDemanda(oDemanda, rabbitMQHost, queueNamed))
+        if (oEDS.EnfileraDemanda(oDemanda, rabbitMQHost.Value, queueNamed.Value))
         {
             return Results.Ok(oDemanda);
         }

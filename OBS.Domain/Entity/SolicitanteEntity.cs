@@ -26,8 +26,8 @@ namespace OBS.Domain.Entity
             TelefoneSolicitante = string.Empty;
             DataCadastro = DateTime.MinValue;
             DataAlteracao = DateTime.MinValue;
-            IdUsuarioCadastro = string.Empty;
-            IdUsuarioAlteracao = string.Empty;
+            //IdUsuarioCadastro = string.Empty;
+            //IdUsuarioAlteracao = string.Empty;
             lDemandas = new List<DemandaEntity>();
 
         }

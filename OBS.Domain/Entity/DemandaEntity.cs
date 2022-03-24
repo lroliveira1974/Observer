@@ -9,7 +9,7 @@ namespace OBS.Domain.Entity
     public class DemandaEntity : EntityBase
     {
         //INTERFACES UTILIZADAS
-        private ISolicitanteService iSolicitanteService;
+        //private ISolicitanteService iSolicitanteService;
 
     
         public DateTime DataDemanda { get; set; }
@@ -20,10 +20,10 @@ namespace OBS.Domain.Entity
         public SolicitanteEntity oSolicitante { get; set; }
         
 
-        public DemandaEntity(ISolicitanteService _solicitanteService)
+        public DemandaEntity()
         {
             // INJECAO DE DEPENDENCIA
-            iSolicitanteService = _solicitanteService;
+            //iSolicitanteService = _solicitanteService;
 
 
             Id = Guid.NewGuid(); 
@@ -34,13 +34,15 @@ namespace OBS.Domain.Entity
             DataAlteracao=DateTime.MinValue;
             IdUsuarioCadastro = string.Empty;
             IdUsuarioAlteracao= string.Empty;
+            PrioridadeDemanda = EPrioridadeDemanda.Baixa;
+            IsProcedente = false;
             oSolicitante = new SolicitanteEntity();
 
         }
 
-        public SolicitanteEntity ObterSolicitanteDemanda()
-        {
-            return iSolicitanteService.ObterDetalheSolicitantePorDemanda(this.Id.ToString());
-        }
+        //public SolicitanteEntity ObterSolicitanteDemanda()
+        //{
+        //    return iSolicitanteService.ObterDetalheSolicitantePorDemanda(this.Id.ToString());
+        //}
     }
 }
